@@ -15,7 +15,7 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_project.settings')
 
 application = get_wsgi_application()
 
-path = '/home/django-pokemon/cardquest/cardquest-master-app/projectsite'
+path = '/home/cardquest-master-app/projectsite'
 if path not in sys.path:
     sys.path.insert(0,path)
 os.environ['DJANGO_SETTINGS_MODULE'] = 'projectsite.settings'
