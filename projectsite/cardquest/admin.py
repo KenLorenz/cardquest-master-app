@@ -13,5 +13,5 @@ from .models import PokemonCard, Trainer, Collection
 @admin.register(Trainer)
 
 class PokemonAdmin(admin.ModelAdmin):
-    list_display = ("name")
+    list_display = ("name", "rarity")
     search_fields = ("name",)
