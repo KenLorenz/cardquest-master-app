@@ -17,9 +17,9 @@ class PokemonAdmin(admin.ModelAdmin):
     search_fields = ("name",)
 
 class TrainerAdmin(admin.ModelAdmin):
-    list_display = ("name", "birthdate")
+    list_display = ("name", "location","email","birthdate")
     search_fields = ("name",)
     
 class CollectionAdmin(admin.ModelAdmin):
-    list_display = ("card", "collection_date")
+    list_display = ("trainer", "card","collection_date")
     search_fields = ("name",)
