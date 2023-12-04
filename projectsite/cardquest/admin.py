@@ -24,4 +24,4 @@ class TrainerAdmin(admin.ModelAdmin):
 
 class CollectionAdmin(admin.ModelAdmin):
     list_display = ("trainer", "card","collection_date")
-    search_fields = ("name",)
+    search_fields = ("trainer",)
