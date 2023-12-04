@@ -18,11 +18,11 @@ class TrainerList(ListView):
         context = super().get_context_data(**kwargs)
         return context
 
-
 class HomePageView(ListView):
     model = PokemonCard
     context_object_name = 'home'
     template_name = "templates/base.html"
+    paginate_by = 15
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
