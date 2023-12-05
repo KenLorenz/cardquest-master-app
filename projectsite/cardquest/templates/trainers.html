@@ -20,8 +20,6 @@
     {% include 'includes/navbar.html' %}
     {% block content %}
 
-    
-
     <!--TRAINERS-->
     <main>
     <section class="trainers-container">
@@ -33,14 +31,15 @@
             <th>Location</th>
             <th>Email</th>
           </tr>
-
+          {% for x in trainer %}
+          <p> {{ rows }}</p>
           <tr>
-            <td>Ash</td>
-            <td>1987-05-22</td>
-            <td>Pallet Town</td>
-            <td>ash@pokemon.com</td>
+            <td>{{ x.name }}</td>
+            <td>{{ x.birthdate }}</td>
+            <td>{{ x.location }}</td>
+            <td>{{ x.email }}</td>
           </tr>
-
+          {% endfor %}
         </tbody>
       </table>
     </section>

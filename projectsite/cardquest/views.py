@@ -1,6 +1,6 @@
 from django.views.generic.list import ListView
 from cardquest.models import PokemonCard, Trainer, Collection
-
+from django.shortcuts import render
 # Create your views here.
 
 class CollectionList(ListView):
@@ -31,3 +31,4 @@ class HomePageView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         return context
+
