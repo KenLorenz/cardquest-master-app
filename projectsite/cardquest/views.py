@@ -31,7 +31,9 @@ class HomePageView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         
-        context['card_number_format'] = [f"{card.card_number:03d}" for card in context['pokemoncards']]
+        # this doesn't work.. WHY??
+        context['card_number_img'] = [x.card_number for x in context['pokemoncards']]
+        context['card_number_main'] = [x.card_number for x in context['pokemoncards']]
         
         return context
 
