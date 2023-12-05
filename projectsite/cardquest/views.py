@@ -24,11 +24,14 @@ class TrainerList(ListView):
 
 class HomePageView(ListView):
     model = PokemonCard
-    context_object_name = 'pokemoncard'
+    context_object_name = 'pokemoncards'
     template_name = "pokemoncards.html"
     paginate_by = 15
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        
+        context['card_number_format'] = [f"{card.card_number:03d}" for card in context['pokemoncards']]
+        
         return context
 

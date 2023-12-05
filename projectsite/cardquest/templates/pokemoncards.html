@@ -16,19 +16,18 @@
   <body>
     {% include 'includes/navbar.html' %}
 
-    <main>
-      <!--CARDS-->
-      <section class="cards-container">
-        {% block content %}
+    {% block content %}
 
+    {% for x in pokemoncards %}
+    <main>
+      <section class="cards-container">
 
         <div class="card-box">
           <div class="card">
-            {% for x in pokemoncard %}
             <div class="card-type" id="{{ x.card_type }}">
               <div class="card-image" id="{{ x.card_type }}-img">
                 <img
-                  src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/{{ x.card_number }}.png"
+                  src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/{{ x.card_number_format }}.png"
                   alt="{{ x.name }}"
                 />
               </div>
@@ -70,13 +69,13 @@
                   </tr>
                 </tbody>
               </table>
-              {% endfor %}
               <hr />
             </div>
           </div>
         </div>
 
-        
+    </main>
+        {% endfor %}
 
         {% endblock %}
         

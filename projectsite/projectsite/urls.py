@@ -25,5 +25,5 @@ urlpatterns = [
         path('', views.HomePageView.as_view(), name='home'),
         path('trainer_list', views.TrainerList.as_view(), name='trainer-list'),
         path('collection_list', views.CollectionList.as_view(), name='collection-list'),
-        path('pokemoncard_list', views.CollectionList.as_view(), name='pokemoncard-list'),
+        path('pokemoncard_list', views.HomePageView.as_view(), name='pokemoncard-list'),
 ]
