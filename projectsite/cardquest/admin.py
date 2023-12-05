@@ -6,8 +6,6 @@ from .models import PokemonCard, Trainer, Collection
 
 # add admin menus
 
-
-
 @admin.register(PokemonCard)
 
 class PokemonAdmin(admin.ModelAdmin):
