@@ -13,13 +13,7 @@
     <title>{% block title %} CardQuest Master {% endblock %}</title>
   </head>
   <body>
-    <!--NAVBAR-->
-    <section class="navbar">
-      <a href="{% url 'home' %}" class="btn" id="active"> Home </a>
-      <a href="{% url 'trainer-list' %}" class="btn"> Trainer </a>
-      <a href="pokemon-card.html" class="btn"> Pokemon Card </a>
-      <a href="{% url 'collection-list' %}" class="btn"> Collection </a>
-    </section>
+    {% include 'includes/navbar.html' %}
 
     <!--CONTENT-->
     <main>
@@ -28,8 +22,6 @@
         {% endblock %}
     </main>
       
-    
-
     {% include 'includes/footer.html' %}
   </body>
 </html>
