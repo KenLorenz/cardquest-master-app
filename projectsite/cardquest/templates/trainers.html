@@ -1,6 +1,51 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block content %}
 
-{% endblock %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+    <title>Pokemon | Trainers</title>
+  </head>
+  <body>
+    {% include 'includes/navbar.html' %}
+    {% block content %}
+
+    
+
+    <!--TRAINERS-->
+    <main>
+    <section class="trainers-container">
+      <table class="styled-table">
+        <tbody>
+          <tr>
+            <th>Trainer Name</th>
+            <th>Birthdate</th>
+            <th>Location</th>
+            <th>Email</th>
+          </tr>
+
+          <tr>
+            <td>Ash</td>
+            <td>1987-05-22</td>
+            <td>Pallet Town</td>
+            <td>ash@pokemon.com</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </section>
+  </main>
+    {% endblock %}
+    {% include 'includes/footer.html' %}
+  </body>
+</html>
