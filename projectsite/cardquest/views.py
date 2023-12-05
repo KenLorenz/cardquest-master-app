@@ -24,8 +24,8 @@ class TrainerList(ListView):
 
 class HomePageView(ListView):
     model = PokemonCard
-    context_object_name = 'home'
-    template_name = "base.html"
+    context_object_name = 'pokemoncard'
+    template_name = "pokemoncards.html"
     paginate_by = 15
 
     def get_context_data(self, **kwargs):
