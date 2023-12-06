@@ -74,9 +74,8 @@ class PokemonCard(BaseModel):
     abilities = models.CharField(max_length=250, null=True, blank=True)
     
 class Collection(BaseModel):
-    card = models.ForeignKey(PokemonCard, blank=True, 
-                                null=True, on_delete=models.CASCADE)
-    trainer = models.ForeignKey(
-        Trainer, blank=True, null=True, on_delete=models.CASCADE
-    )
+    card = models.ForeignKey(PokemonCard, blank=True, null=True, on_delete=models.CASCADE)
+    
+    trainer = models.ForeignKey(Trainer, blank=True, null=True, on_delete=models.CASCADE)
+    
     collection_date = models.DateField()

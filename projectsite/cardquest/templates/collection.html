@@ -1,6 +1,46 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+    <title>Pokemon | Collection</title>
+  </head>
+  <body>
+    {% include 'includes/navbar.html' %}
 
-{% endblock %}
+    {% block content %}
+    <!--COLLECTION-->
+    <main>
+    <section class="collection-container">
+      <table class="styled-table">
+        <tbody>
+          <tr>
+            <th>Trainer</th>
+            <th>Pokemon Card</th>
+            <th>Collection Date</th>
+          </tr>
+
+            {% for x in collection %}
+          <tr>
+            <td>{{ x.trainer }}</td>
+            <td>{{ x.card }}</td>
+            <td>{{ x.collection_date }}</td>
+          </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  {% endblock %}
+  {% include 'includes/footer.html' %}
+  </body>
+</html>
