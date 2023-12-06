@@ -73,6 +73,9 @@ class PokemonCard(BaseModel):
     
     abilities = models.CharField(max_length=250, null=True, blank=True)
     
+    def __str__(self): # just a hunch
+        return self.name
+    
 class Collection(BaseModel):
     card = models.ForeignKey(PokemonCard, blank=True, null=True, on_delete=models.CASCADE)
     
