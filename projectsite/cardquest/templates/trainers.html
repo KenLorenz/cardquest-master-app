@@ -19,6 +19,9 @@
 
     <!--TRAINERS-->
     <main>
+
+    <a href="{% url 'trainer-add' %}" class="btn btn-outline-primary">Add New Trainer</a><br>
+
     <section class="trainers-container">
       <table class="styled-table">
         <tbody>
@@ -27,6 +30,7 @@
             <th>Birthdate</th>
             <th>Location</th>
             <th>Email</th>
+            <th>Action</th>
           </tr>
           {% for x in trainer %}
           <tr>
@@ -34,10 +38,15 @@
             <td>{{ x.birthdate }}</td>
             <td>{{ x.location }}</td>
             <td>{{ x.email }}</td>
+            <td>
+              <a href="trainer_list/{{ x.id }}">Edit</a> |
+              <a href="trainer_list/{{ x.id }}/delete" >Delete</a>
+            </td>
           </tr>
           {% endfor %}
         </tbody>
       </table>
+      {% comment %} {% include 'includes/pagination.html' %} {% endcomment %}
     </section>
   </main>
     {% endblock %}
