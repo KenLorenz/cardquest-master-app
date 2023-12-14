@@ -18,7 +18,9 @@
 
     {% block content %}
     <!--COLLECTION-->
+    
     <main>
+      <a href="{% url 'collection-add' %}" class="btn btn-outline-primary" id="add-btn">Add New Collection</a><br>
     <section class="collection-container">
       <table class="styled-table">
         <tbody>
@@ -26,6 +28,7 @@
             <th>Trainer</th>
             <th>Pokemon Card</th>
             <th>Collection Date</th>
+            <th>Action</th>
           </tr>
 
             {% for x in collection %}
@@ -33,13 +36,19 @@
             <td>{{ x.trainer }}</td>
             <td>{{ x.card }}</td>
             <td>{{ x.collection_date }}</td>
+            <td>
+              <a href="collection_list/{{ x.id }}">Edit</a> |
+              <a href="collection_list/{{ x.id }}/delete" >Delete</a>
+            </td>
           </tr>
             {% endfor %}
         </tbody>
       </table>
     </section>
   </main>
-
+  <div>
+    {% include 'includes/pagination.html' %}
+  </div>
   {% endblock %}
   {% include 'includes/footer.html' %}
   </body>
