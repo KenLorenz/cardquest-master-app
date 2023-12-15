@@ -2,9 +2,9 @@
 {% load static %}
 {% block content %}
 <div class="card-body ">
-    <form method="post">
+    <form method="post" class="crud">
         {% csrf_token %}
-        <div class="form-row ">
+        <div class="form-row">
             <p>Are you sure you want to delete "{{ object }}"?</p>
             {% include 'includes/form.html' %}
         </div>

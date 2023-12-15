@@ -53,7 +53,7 @@ class PokemonCardList(ListView):
     model = PokemonCard
     context_object_name = 'pokemoncards'
     template_name = "pokemoncards.html"
-    paginate_by = 4
+    paginate_by = 8
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

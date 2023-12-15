@@ -9,6 +9,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
     <title>Pokemon | Trainers</title>
@@ -20,7 +21,11 @@
     <!--TRAINERS-->
     
     <main>
-    <a href="{% url 'trainer-add' %}" class="btn btn-outline-primary">Add New Trainer</a><br>
+    
+    <div class="add-div">
+      <a href="{% url 'trainer-add' %}" class="add-btn">Add New Trainer</a>
+    </div>
+
     <section class="trainers-container">
       <table class="styled-table">
         
@@ -50,9 +55,6 @@
     </section>
     
   </main>
-    <div>
-      {% include 'includes/pagination.html' %}
-    </div>
     {% endblock %}
     {% include 'includes/footer.html' %}
   </body>

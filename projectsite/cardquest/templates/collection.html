@@ -20,7 +20,9 @@
     <!--COLLECTION-->
     
     <main>
-      <a href="{% url 'collection-add' %}" class="btn btn-outline-primary" id="add-btn">Add New Collection</a><br>
+      <div class="add-div">
+        <a href="{% url 'collection-add' %}" class="add-btn">Add New Collection</a>
+      </div>
     <section class="collection-container">
       <table class="styled-table">
         <tbody>
@@ -46,9 +48,6 @@
       </table>
     </section>
   </main>
-  <div>
-    {% include 'includes/pagination.html' %}
-  </div>
   {% endblock %}
   {% include 'includes/footer.html' %}
   </body>
